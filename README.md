@@ -32,6 +32,7 @@ It opens a single WhatsApp Web tab and processes numbers sequentially.
 
 ## 📦 Project Structure
 
+```
 TurboText-WA/
 │
 ├── manifest.json
@@ -43,6 +44,7 @@ TurboText-WA/
     ├── icon16.png
     ├── icon48.png
     └── icon128.png
+```
 
 ---
 
@@ -63,8 +65,10 @@ TurboText-WA/
 3. Click the extension icon
 4. Enter numbers in international format:
 
+```
 919876543210
 919812345678
+```
 
 Do NOT use +
 
