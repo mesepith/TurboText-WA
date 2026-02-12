@@ -61,18 +61,18 @@ TurboText-WA/
 
 1. Open Chrome
 2. Go to:
-
+````
 
 chrome://extensions/
 
-
+```
 3. Enable **Developer Mode**
 4. Click **Load Unpacked**
 5. Select the project folder
 
 The extension icon will appear in your toolbar.
 
-```
+---
 
 ## 📲 Usage
 
@@ -80,7 +80,7 @@ The extension icon will appear in your toolbar.
 2. Click the TurboText WA extension icon.
 3. Enter phone numbers in this format:
 
-
+```
 
 919876543210
 919812345678
