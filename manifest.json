@@ -2,10 +2,10 @@
   "manifest_version": 3,
   "name": "TurboText WA - Bulk WhatsApp Sender",
   "version": "1.0",
-  "description": "Paste multiple phone numbers and send the same WhatsApp message to all (uses web.whatsapp.com). Use responsibly.",
+  "description": "Paste multiple phone numbers and send the same WhatsApp message to all. Use responsibly.",
   "action": {
     "default_popup": "popup.html",
-    "default_title": "WhatsBulk"
+    "default_title": "TurboText WA"
   },
   "icons": {
     "16": "icons/icon16.png",
