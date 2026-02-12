@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "WhatsBulk — Bulk WhatsApp Sender (local)",
+  "name": "TurboText WA - Bulk WhatsApp Sender",
   "version": "1.0",
   "description": "Paste multiple phone numbers and send the same WhatsApp message to all (uses web.whatsapp.com). Use responsibly.",
   "action": {
