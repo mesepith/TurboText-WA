@@ -1,178 +1,164 @@
-# ⚡ TurboText WA
+```md
+# ⚡ TurboText WA  
+### Bulk WhatsApp Sender – Chrome Extension
 
-### Bulk WhatsApp Sender -- Chrome Extension
-
-```{=html}
 <p align="center">
-```
-`<img src="icons/icon128.png" width="120" alt="TurboText WA Logo"/>`{=html}
-```{=html}
+  <img src="icons/icon128.png" width="120" alt="TurboText WA Logo">
 </p>
-```
-```{=html}
-<p align="center">
-```
-`<b>`{=html}Send WhatsApp messages to multiple numbers automatically
-using WhatsApp Web.`</b>`{=html}`<br>`{=html} Fast • Simple • Automated
-```{=html}
-</p>
-```
 
-------------------------------------------------------------------------
+<p align="center">
+  <b>Send WhatsApp messages to multiple numbers automatically using WhatsApp Web.</b><br>
+  Fast • Simple • Automated
+</p>
+
+---
 
 ## 🚀 Overview
 
 TurboText WA is a Chrome Extension that allows you to:
 
--   Send the same message to multiple WhatsApp numbers
--   Automatically click the send button
--   Add delay between messages
--   Use WhatsApp Web (no API required)
+- Send the same message to multiple WhatsApp numbers
+- Automatically click the send button
+- Add delay between messages
+- Use WhatsApp Web (no API required)
 
 It opens a single WhatsApp Web tab and processes numbers sequentially.
 
-------------------------------------------------------------------------
+---
 
 ## ✨ Features
 
--   ✅ Bulk message sending
--   ✅ Automatic send (no manual click)
--   ✅ Configurable delay between messages
--   ✅ Manifest V3 compliant
--   ✅ Reuses single WhatsApp tab
--   ✅ Invalid number detection
+- ✅ Bulk message sending  
+- ✅ Automatic send (no manual click)  
+- ✅ Configurable delay between messages  
+- ✅ Manifest V3 compliant  
+- ✅ Reuses single WhatsApp tab  
+- ✅ Invalid number detection  
 
-------------------------------------------------------------------------
-
-## 🖼 How It Works
-
-1.  Enter phone numbers (one per line)
-2.  Write your message
-3.  Click **Send**
-4.  Extension:
-    -   Opens WhatsApp Web
-    -   Navigates to each number
-    -   Injects script to click "Send"
-    -   Waits configured delay
-    -   Moves to next number
-
-------------------------------------------------------------------------
+---
 
 ## 📦 Project Structure
 
-    TurboText-WA/
-    │
-    ├── manifest.json
-    ├── background.js
-    ├── popup.html
-    ├── popup.js
-    ├── popup.css
-    └── icons/
-        ├── icon16.png
-        ├── icon48.png
-        └── icon128.png
+```
 
-------------------------------------------------------------------------
+TurboText-WA/
+│
+├── manifest.json
+├── background.js
+├── popup.html
+├── popup.js
+├── popup.css
+└── icons/
+├── icon16.png
+├── icon48.png
+└── icon128.png
+
+```
+
+---
 
 ## 🔧 Installation (Developer Mode)
 
-1.  Open Chrome
-2.  Go to: chrome://extensions/
-3.  Enable **Developer Mode**
-4.  Click **Load Unpacked**
-5.  Select this project folder
+1. Open Chrome  
+2. Go to: `chrome://extensions/`  
+3. Enable **Developer Mode**  
+4. Click **Load Unpacked**  
+5. Select this project folder  
 
 The extension will appear in your toolbar.
 
-------------------------------------------------------------------------
+---
 
 ## 📲 Usage
 
-1.  Open **WhatsApp Web**
-2.  Ensure you are logged in
-3.  Click the extension icon
-4.  Enter numbers in international format:
+1. Open **WhatsApp Web**
+2. Ensure you are logged in
+3. Click the extension icon
+4. Enter numbers in international format:
 
-```{=html}
-<!-- -->
 ```
-    919876543210
-    919812345678
+
+919876543210
+919812345678
+
+```
 
 ⚠️ Do NOT use `+`
 
-5.  Write your message
-6.  Set delay (recommended: 5--10 seconds)
-7.  Click **Send**
+5. Write your message  
+6. Set delay (recommended: 5–10 seconds)  
+7. Click **Send**
 
-------------------------------------------------------------------------
+---
 
 ## ⏳ Recommended Delay
 
-  Batch Size   Recommended Delay
-  ------------ -------------------
-  Small        3--5 seconds
-  Medium       5--10 seconds
-  Large        10--20 seconds
+| Batch Size | Recommended Delay |
+|------------|-------------------|
+| Small      | 3–5 seconds       |
+| Medium     | 5–10 seconds      |
+| Large      | 10–20 seconds     |
 
 Avoid sending too many messages too quickly.
 
-------------------------------------------------------------------------
+---
 
 ## 🔐 Permissions Used
 
-  Permission           Purpose
-  -------------------- ------------------------------
-  `tabs`               Open & update WhatsApp tab
-  `scripting`          Inject send-click script
-  `storage`            Reserved for future features
-  `host_permissions`   Access WhatsApp Web
+| Permission | Purpose |
+|------------|----------|
+| `tabs` | Open & update WhatsApp tab |
+| `scripting` | Inject send-click script |
+| `storage` | Reserved for future features |
+| `host_permissions` | Access WhatsApp Web |
 
-------------------------------------------------------------------------
+---
 
 ## ⚠️ Important Notes
 
--   This extension does NOT use WhatsApp Business API
--   It works purely via WhatsApp Web automation
--   If WhatsApp updates its UI, selectors may need update
--   Use responsibly
+- This extension does NOT use WhatsApp Business API  
+- It works purely via WhatsApp Web automation  
+- If WhatsApp updates its UI, selectors may need update  
+- Use responsibly  
 
-------------------------------------------------------------------------
+---
 
 ## 📌 Disclaimer
 
 This tool is intended for:
 
--   Customer follow-ups
--   Small business messaging
--   Personal automation
+- Customer follow-ups  
+- Small business messaging  
+- Personal automation  
 
 You are responsible for complying with WhatsApp Terms of Service.
 
-------------------------------------------------------------------------
-
-## 🛣 Future Improvements
-
--   CSV import
--   Randomized delay
--   Status tracker (sent/failed)
--   Batch limits
--   Dark mode
--   Scheduling
-
-------------------------------------------------------------------------
+---
 
 ## 🧠 Version
 
-**v1.0** - Initial bulk sender - Automatic send injection - Delay
-control
+**v1.0**  
+Initial bulk sender • Automatic send injection • Delay control
 
-------------------------------------------------------------------------
+---
 
-```{=html}
 <p align="center">
-```
-⚡ TurboText WA -- Fast. Simple. Automated.
-```{=html}
+⚡ TurboText WA – Fast. Simple. Automated.
 </p>
 ```
+
+---
+
+# 🚨 Important
+
+Delete the old README.md and upload this one manually.
+
+Do NOT generate it using pandoc.
+
+Just:
+
+1. Open README.md in VS Code
+2. Paste above content
+3. Commit
+4. Push
+
