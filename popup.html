@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WhatsBulk</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>WhatsBulk — Bulk Sender</h2>
+
+    <label>Phone numbers (one per line, international format, e.g. 919876543210)</label>
+    <textarea id="numbers" placeholder="919876543210\n919812345678" rows="6"></textarea>
+
+    <label>Message</label>
+    <textarea id="message" placeholder="Write your message..." rows="4"></textarea>
+
+    <div class="row">
+      <label for="delay">Delay (seconds) between sends:</label>
+      <input id="delay" type="number" min="0" value="4" />
+    </div>
+
+    <div class="row">
+      <button id="sendBtn">Send</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <div class="footer">
+      <small>Tip: test with 1-2 numbers first. Use responsibly.</small>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

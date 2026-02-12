@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsBulk — Bulk WhatsApp Sender (local)",
+  "version": "1.0",
+  "description": "Paste multiple phone numbers and send the same WhatsApp message to all (uses web.whatsapp.com). Use responsibly.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "WhatsBulk"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "tabs",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://web.whatsapp.com/*",
+    "https://api.whatsapp.com/*",
+    "https://wa.me/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
