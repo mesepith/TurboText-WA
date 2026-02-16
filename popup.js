@@ -11,6 +11,7 @@ function setStatus(text, isError = false) {
   statusEl.style.color = isError ? 'crimson' : 'black';
 }
 
+// Parse raw input into array of phone numbers, ignoring empty lines and trimming spaces
 function parseNumbers(raw) {
   return raw
     .split(/\r?\n/)
