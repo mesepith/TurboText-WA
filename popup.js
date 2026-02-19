@@ -1,5 +1,5 @@
 // popup.js
-const numbersEl = document.getElementById('numbers');
+const targetsEl = document.getElementById('targets');
 const messageEl = document.getElementById('message');
 const delayEl = document.getElementById('delay');
 const sendBtn = document.getElementById('sendBtn');
@@ -11,8 +11,8 @@ function setStatus(text, isError = false) {
   statusEl.style.color = isError ? 'crimson' : 'black';
 }
 
-// Parse raw input into array of phone numbers, ignoring empty lines and trimming spaces
-function parseNumbers(raw) {
+// Parse input into array of strings
+function parseTargets(raw) {
   return raw
     .split(/\r?\n/)
     .map(s => s.trim())
@@ -20,13 +20,13 @@ function parseNumbers(raw) {
 }
 
 sendBtn.addEventListener('click', async () => {
-  const raw = numbersEl.value;
+  const raw = targetsEl.value;
   const message = messageEl.value.trim();
-  const delaySec = Math.max(0, parseFloat(delayEl.value) || 0);
+  const delaySec = Math.max(2, parseFloat(delayEl.value) || 2); // Minimum 2s delay recommended for UI ops
 
-  const numbers = parseNumbers(raw);
-  if (!numbers.length) {
-    setStatus('Please add at least one phone number.', true);
+  const targets = parseTargets(raw);
+  if (!targets.length) {
+    setStatus('Please add at least one number or group name.', true);
     return;
   }
   if (!message) {
@@ -34,33 +34,35 @@ sendBtn.addEventListener('click', async () => {
     return;
   }
 
-  // Disable UI while sending
+  // Disable UI
   sendBtn.disabled = true;
   clearBtn.disabled = true;
-  setStatus(`Sending to ${numbers.length} number(s)...`);
+  setStatus(`Processing ${targets.length} target(s)...`);
 
-  // Send to background service worker
+  // Send to background
   try {
     chrome.runtime.sendMessage({
       action: 'startSend',
-      numbers,
+      targets,
       message,
       delaySec
     }, (resp) => {
-      // will get immediate ack; further progress shown by notifications or storage
-      setStatus('Started sending. Tabs will open for each number. Monitor WhatsApp Web.');
-      sendBtn.disabled = false;
-      clearBtn.disabled = false;
+      setStatus('Started. DO NOT close or minimize the WhatsApp tab that opens.');
+      // Re-enable buttons after a short timeout so user knows it started
+      setTimeout(() => {
+        sendBtn.disabled = false;
+        clearBtn.disabled = false;
+      }, 2000);
     });
   } catch (err) {
-    setStatus('Failed to start send: ' + err.message, true);
+    setStatus('Failed to start: ' + err.message, true);
     sendBtn.disabled = false;
     clearBtn.disabled = false;
   }
 });
 
 clearBtn.addEventListener('click', () => {
-  numbersEl.value = '';
+  targetsEl.value = '';
   messageEl.value = '';
   setStatus('');
 });
