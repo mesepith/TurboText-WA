@@ -6,6 +6,7 @@ const sendBtn = document.getElementById('sendBtn');
 const clearBtn = document.getElementById('clearBtn');
 const statusEl = document.getElementById('status');
 
+/** Desc: Sets the status message in the UI */
 function setStatus(text, isError = false) {
   statusEl.textContent = text;
   statusEl.style.color = isError ? 'crimson' : 'black';
