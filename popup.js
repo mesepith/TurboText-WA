@@ -20,6 +20,7 @@ function parseTargets(raw) {
     .filter(s => s.length > 0);
 }
 
+// Handle send button click
 sendBtn.addEventListener('click', async () => {
   const raw = targetsEl.value;
   const message = messageEl.value.trim();
