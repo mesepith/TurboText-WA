@@ -63,6 +63,7 @@ sendBtn.addEventListener('click', async () => {
   }
 });
 
+// Handle clear button click
 clearBtn.addEventListener('click', () => {
   targetsEl.value = '';
   messageEl.value = '';
