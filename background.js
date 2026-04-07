@@ -9,6 +9,9 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   return true;
 });
 
+/**
+ * @author: Zahir
+ */
 async function processQueue(targets, message, delaySec) {
   let tabId = null;
 
