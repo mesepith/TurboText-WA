@@ -11,6 +11,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 
 /**
  * @author: Zahir
+ * @desc: Main function to process the queue of targets. It creates one tab to WhatsApp Web and reuses it for all messages
  */
 async function processQueue(targets, message, delaySec) {
   let tabId = null;
