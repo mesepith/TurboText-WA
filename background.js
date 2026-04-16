@@ -75,6 +75,9 @@ async function processQueue(targets, message, delaySec) {
 
 // --- Helpers ---
 
+/**
+ * @author: Zahir
+ */
 function createTab(url) {
   return new Promise(resolve => {
     chrome.tabs.create({ url, active: true }, tab => resolve(tab));
