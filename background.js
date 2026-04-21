@@ -77,6 +77,7 @@ async function processQueue(targets, message, delaySec) {
 
 /**
  * @author: Zahir
+ * DESC: Creates a new tab and returns a promise that resolves with the tab object once created
  */
 function createTab(url) {
   return new Promise(resolve => {
