@@ -85,6 +85,9 @@ function createTab(url) {
   });
 }
 
+/**
+ * @author: Zahir
+ */
 function updateTabAndWait(tabId, url) {
   return new Promise((resolve) => {
     chrome.tabs.update(tabId, { url }, () => {
