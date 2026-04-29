@@ -87,6 +87,7 @@ function createTab(url) {
 
 /**
  * @author: Zahir
+ * Desc: Updates the given tab with a new URL and returns a promise that resolves once the page is fully loaded (status 'complete')
  */
 function updateTabAndWait(tabId, url) {
   return new Promise((resolve) => {
