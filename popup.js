@@ -66,7 +66,11 @@ sendBtn.addEventListener('click', async () => {
   }
 });
 
-// Handle clear button click
+/**
+ * @author: Zahir
+ * Desc: Clears the input fields and status message when the clear button is clicked  
+ */
+
 clearBtn.addEventListener('click', () => {
   targetsEl.value = '';
   messageEl.value = '';
