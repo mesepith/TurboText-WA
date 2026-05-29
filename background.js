@@ -1,5 +1,8 @@
 // background.js (service worker)
 
+/**
+ * @author: Zahir
+ */
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg.action === 'startSend') {
     const { targets, message, delaySec } = msg;
