@@ -2,6 +2,7 @@
 
 /**
  * @author: Zahir
+ * Desc: Listens for messages from the popup and starts the sending process. It expects an array of targets, a message, and a delay in seconds between messages.
  */
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg.action === 'startSend') {
