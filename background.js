@@ -111,6 +111,9 @@ function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
 
+/**
+ * @author: Zahir
+ */
 // Helper: Just clicks the send button (for URL method)
 function injectClickSend(tabId) {
   return chrome.scripting.executeScript({
